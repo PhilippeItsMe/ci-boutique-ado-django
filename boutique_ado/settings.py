@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-ya+-uk*d*mj=*qdciy+rs&88rel9$e5z9!+2b!y9s)g(l@@a^z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'localhost:8000', '8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = [ 'localhost', '8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
 
 
 # Application definition
@@ -55,7 +55,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'boutique_ado.urls'
@@ -126,7 +125,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/sucess'
+LOGIN_REDIRECT_URL = '/'
 
 
 # Internationalization

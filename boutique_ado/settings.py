@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,10 @@ ROOT_URLCONF = 'boutique_ado.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'), # to look for templates outside the app
+            os.path.join(BASE_DIR, 'templates', 'allauth'), # to override the default templates of Django-Allauth
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

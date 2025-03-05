@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ya+-uk*d*mj=*qdciy+rs&88rel9$e5z9!+2b!y9s)g(l@@a^z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'localhost', '8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = [ 'localhost', '8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io','8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu118.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost', 'https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
 
@@ -76,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -161,3 +162,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Stripe
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10

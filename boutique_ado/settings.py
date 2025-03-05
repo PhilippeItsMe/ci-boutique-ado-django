@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ 'localhost', '8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io','8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu118.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost', 'https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu117.gitpod.io','https://8000-philippeits-ciboutiquea-s9dxe7bz4o2.ws-eu118.gitpod.io']
 
 
 # Application definition

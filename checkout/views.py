@@ -13,7 +13,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    # to register the order in the dB
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
@@ -100,23 +99,19 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts, will help rendering the success template
+    Handle successful checkouts
     """
-    # to render a sucess message
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
     
-    # to delete the bag as the cession is done
     if 'bag' in request.session:
         del request.session['bag']
 
-     # to set the template and the context
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
-    # to render the template
     return render(request, template, context)
